@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "backend": "node ./backend/index.js",
+    "generate": "nuxt generate",
+    "generate:logs": "node ./node_modules/nuxi/bin/nuxi.mjs generate | ts -s | tee inspect-logs.out",
+    "inspect": "node --inspect ./node_modules/nuxi/bin/nuxi.mjs generate",
+    "inspect:logs": "node --inspect ./node_modules/nuxi/bin/nuxi.mjs generate | ts -s | tee inspect.log"
+  },
+  "devDependencies": {
+    "@nuxt/content": "^2.7.2",
+    "@nuxt/devtools": "latest",
+    "@types/node": "^18.17.1",
+    "nuxt": "^3.6.5"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
