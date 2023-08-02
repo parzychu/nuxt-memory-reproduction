@@ -3,6 +3,25 @@ Nuxt 3 application created to show a teaser of performance issue that can occurr
 This app builds 10k pages with 2 components.
 It doesn't use much memory but I think that logs show the problem that can show when pages are more complex.
 
+Nuxt config:
+
+```
+{
+  devtools: { enabled: true },
+
+  modules: ["@nuxt/content"],
+
+  nitro: {
+    preset: "netlify-static",
+  },
+
+  experimental: {
+    renderJsonPayloads: true,
+    payloadExtraction: true,
+  },
+}
+```
+
 # PROBLEM
 
 When using nuxi generate application holds memory for longer than I think it should and in some cases it can cause out of memory issue.

@@ -6,10 +6,6 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: "netlify-static",
-
-    prerender: {
-      routes: ["home"],
-    },
   },
 
   experimental: {
